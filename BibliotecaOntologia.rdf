@@ -1,0 +1,472 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia/"
+     xml:base="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:BibliotecaOntologia="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#"
+     xmlns:untitled-ontology-45="http://www.semanticweb.org/vmans/ontologies/2024/10/untitled-ontology-45#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia">
+        <rdfs:comment>Diseño de una ontologia para gestionar una biblioteca</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#esAutorDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#esAutorDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#gestiona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#gestiona">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#incluyeObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#incluyeObra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#perteneceACategoria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#perteneceACategoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#publicadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#publicadoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#tienePrestado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#tienePrestado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#tienePrestamo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#tienePrestamo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#añoPublicación -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#añoPublicación">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#correoUsuario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#correoUsuario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#emailSocio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#emailSocio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#fechaPrestamo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#fechaPrestamo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nacionalidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nacionalidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreAutor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreAutor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreCategoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreCategoria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreEditorial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreEditorial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreSocio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreSocio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreUsuario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#nombreUsuario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#salario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#salario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#título -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#título">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Cómic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Cómic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Libro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Libro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Película -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Película">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Batman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Batman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Cómic"/>
+        <BibliotecaOntologia:publicadoPor rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Juegos"/>
+        <BibliotecaOntologia:añoPublicación>&quot;1983&quot;</BibliotecaOntologia:añoPublicación>
+        <BibliotecaOntologia:título>&quot;Batman&quot;</BibliotecaOntologia:título>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CancionDeHieloYFuego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CancionDeHieloYFuego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Libro"/>
+        <BibliotecaOntologia:publicadoPor rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Alfaguara"/>
+        <BibliotecaOntologia:añoPublicación>&quot;1996&quot;</BibliotecaOntologia:añoPublicación>
+        <BibliotecaOntologia:título>&quot;Canción de hielo y fuego&quot;</BibliotecaOntologia:título>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CarlosOrtiz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CarlosOrtiz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+        <BibliotecaOntologia:tienePrestado rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Batman"/>
+        <BibliotecaOntologia:emailSocio>&quot;carlosOrtiz@email.com&quot;</BibliotecaOntologia:emailSocio>
+        <BibliotecaOntologia:nombreSocio>&quot;Carlos Ortiz&quot;</BibliotecaOntologia:nombreSocio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria_Fantasia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria_Fantasia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Categoria"/>
+        <BibliotecaOntologia:nombreCategoria>&quot;Fantasía&quot;</BibliotecaOntologia:nombreCategoria>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Alfaguara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Alfaguara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial"/>
+        <BibliotecaOntologia:nombreEditorial>&quot;Alfaguara&quot;</BibliotecaOntologia:nombreEditorial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Juegos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Juegos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial"/>
+        <BibliotecaOntologia:nombreEditorial>&quot;Juegos&quot;</BibliotecaOntologia:nombreEditorial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Venus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Venus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial"/>
+        <BibliotecaOntologia:nombreEditorial>&quot;Venus&quot;</BibliotecaOntologia:nombreEditorial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#ElSeñorDeLosAnillos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#ElSeñorDeLosAnillos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Libro"/>
+        <BibliotecaOntologia:publicadoPor rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Editorial_Venus"/>
+        <BibliotecaOntologia:añoPublicación>&quot;1993&quot;</BibliotecaOntologia:añoPublicación>
+        <BibliotecaOntologia:título>&quot;El Señor de los Anillos&quot;</BibliotecaOntologia:título>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado_Maria_Lopez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado_Maria_Lopez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Empleado"/>
+        <BibliotecaOntologia:salario rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.50</BibliotecaOntologia:salario>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#George_R_R_Martin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#George_R_R_Martin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+        <BibliotecaOntologia:esAutorDe rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CancionDeHieloYFuego"/>
+        <BibliotecaOntologia:nacionalidad>&quot;Estadounidense&quot;</BibliotecaOntologia:nacionalidad>
+        <BibliotecaOntologia:nombreAutor>&quot;George R. R. Martín&quot;</BibliotecaOntologia:nombreAutor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#JRR_Tolkien -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#JRR_Tolkien">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+        <BibliotecaOntologia:esAutorDe rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#ElSeñorDeLosAnillos"/>
+        <BibliotecaOntologia:nacionalidad>&quot;Ingles&quot;</BibliotecaOntologia:nacionalidad>
+        <BibliotecaOntologia:nombreAutor>&quot;JRR Tolkien&quot;</BibliotecaOntologia:nombreAutor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#JuanPerez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#JuanPerez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+        <BibliotecaOntologia:tienePrestado rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#ElSeñorDeLosAnillos"/>
+        <BibliotecaOntologia:emailSocio>&quot;juan.perez@email.com&quot;</BibliotecaOntologia:emailSocio>
+        <BibliotecaOntologia:nombreSocio>&quot;JuanPerez&quot;</BibliotecaOntologia:nombreSocio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#MarianoCivico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#MarianoCivico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Autor"/>
+        <BibliotecaOntologia:esAutorDe rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Batman"/>
+        <BibliotecaOntologia:nacionalidad>&quot;Peruano&quot;</BibliotecaOntologia:nacionalidad>
+        <BibliotecaOntologia:nombreAutor>&quot;Mariano Civico&quot;</BibliotecaOntologia:nombreAutor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo"/>
+        <BibliotecaOntologia:fechaPrestamo>&quot;2024-11-20&quot;</BibliotecaOntologia:fechaPrestamo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario_Carlos_Gomez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario_Carlos_Gomez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Usuario"/>
+        <BibliotecaOntologia:incluyeObra rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CancionDeHieloYFuego"/>
+        <BibliotecaOntologia:tienePrestamo rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Prestamo_001"/>
+        <BibliotecaOntologia:correoUsuario>&quot;carlos.gomez@email.com&quot;</BibliotecaOntologia:correoUsuario>
+        <BibliotecaOntologia:nombreUsuario>&quot;Carlos Gómez&quot;</BibliotecaOntologia:nombreUsuario>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#VictorSanchez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#VictorSanchez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#Socio"/>
+        <BibliotecaOntologia:tienePrestado rdf:resource="http://www.semanticweb.org/vmans/ontologies/2024/10/BibliotecaOntologia#CancionDeHieloYFuego"/>
+        <BibliotecaOntologia:emailSocio>&quot;victor.sanchez@email.com&quot;</BibliotecaOntologia:emailSocio>
+        <BibliotecaOntologia:nombreSocio>&quot;VíctorSánchez&quot;</BibliotecaOntologia:nombreSocio>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
